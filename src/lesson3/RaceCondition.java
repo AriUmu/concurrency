@@ -5,13 +5,14 @@ import static lesson1.Utils.pause;
 /**
  * состояние гонки 170331
  * - когда несколько потоков меняют значение общей памяти
+ * read-modify-write
  */
 public class RaceCondition {
 
     static int count = 0;
 
     static class Task implements Runnable {
-        
+
         @Override
         public void run() {
             while (true) {
